@@ -11,8 +11,8 @@ int main() {
         for(int j=0;j<=i;j++){
             cout << char(cnt);
             cnt++;
-            if(char(cnt)=='['){
-                cnt=65;;
+            if(cnt==91){
+                cnt=65;
             }
         }
         cout << endl;

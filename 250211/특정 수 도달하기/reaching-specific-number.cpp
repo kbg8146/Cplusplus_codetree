@@ -10,7 +10,7 @@ int main() {
     for(int i=0;i<10;i++){
         cin >> n;
         if(n>=250){    
-            double avg=sum/(double)i;
+            double avg=(double)sum/i;
             cout << sum << " " << avg;
             break;
         }

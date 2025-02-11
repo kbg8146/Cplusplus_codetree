@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Please write your code here.
+    int arr[9];
+    int n=0;
+    int sum=0;
+
+    for(int i=0;i<10;i++){
+        cin >> n;
+        if(n>=250){    
+            double avg=sum/(double)i;
+            cout << sum << " " << avg;
+            break;
+        }
+        sum+=n;
+
+    }
+    return 0;
+}

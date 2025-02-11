@@ -15,8 +15,9 @@ int main() {
             break;
         }
         sum+=n;
-        if(n<250&&i==9){
+        if(i==9){
             cout << sum << " " << sum/10;
+            break;
         }
         
 

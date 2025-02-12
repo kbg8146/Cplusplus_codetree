@@ -8,13 +8,15 @@ int main() {
     int sum=0;
 
     for(int i=0;i<10;i++){
-        cin >> n;
-        if(n>=250){    
-            double avg=(double)sum/i;
-            cout << sum << " " << avg;
-            break;
+        cin >> arr[i];
+        if(i<9){
+            if(arr[i]>=250){    
+                double avg=(double)sum/i;
+                cout << sum << " " << avg;
+                break;
+            }
         }
-        sum+=n;
+        sum+=arr[i];
         if(i==9){
             cout << sum << " " << sum/10;
             break;

@@ -18,7 +18,12 @@ int main() {
             }
         }
         if(i==9){
-            avg=(double)sum/(i+1);
+            if(arr[i]>=250){   
+                avg=(double)(sum-arr[i])/i;
+                cout << sum-arr[i] << " " << avg;
+                break;
+            }
+            avg=(double)sum/10;
             cout << sum << " " << avg;
             break;
         }

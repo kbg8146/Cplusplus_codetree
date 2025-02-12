@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     // Please write your code here.
     int i=0;
-    int arr[i];
+    int arr[9];
     int sum=0;
     double avg=0;
 

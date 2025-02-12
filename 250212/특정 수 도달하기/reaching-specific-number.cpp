@@ -18,7 +18,7 @@ int main() {
         }
         sum+=arr[i];
         if(i==9){
-            cout << sum << " " << sum/10;
+            cout << sum << " " << (double)sum/10;
             break;
         }
         

@@ -6,23 +6,24 @@ int main() {
     int i=0;
     int arr[9];
     int sum=0;
-    double avg=0;
-
+    double avg=0.0;
+    int cnt=0;
 
     for(i=0;i<10;i++){
         cin >> arr[i];
-        sum +=arr[i];
-
+    } 
+    for(i=0;i<10;i++){
         if(arr[i]>=250){
-            avg=(double)(sum-arr[i])/i;
-            cout << sum-arr[i] << " " << avg;
             break;
         }
-        else if(i==9&&arr[i]<250){
-            avg = sum /(i+1);
-            cout << sum << " " << avg;
-        }
+        sum += arr[i];
+        cnt++;
+    }
 
-    } 
+    avg = (double)sum/cnt;
+
+    cout << fixed;
+    cout.precision(1);
+    cout << sum << " " << avg;
     return 0;
 }

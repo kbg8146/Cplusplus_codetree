@@ -11,15 +11,13 @@ int main() {
     int result =0;
 
     for(i=0;i<1000;i++){
- 
-        if(a<=1){
-
-            break;
-        }       
         arr[a%b]++;        
         a=a/b;
+        if(a<=1){
+            break;
+        }       
     }
-    for(int j=0;j<=i;j++){
+    for(int j=0;j<=9;j++){
         result += arr[j]*arr[j];
     }
     cout << result;

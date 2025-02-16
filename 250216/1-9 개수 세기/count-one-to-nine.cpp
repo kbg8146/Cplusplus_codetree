@@ -5,8 +5,8 @@ int main() {
     // Please write your code here.
     int n;
     cin >> n;
-    int arr[11]={0,};
-    int count_arr[11]={0,};
+    int arr[11]={};
+    int count_arr[11]={};
 
     for(int i=1;i<=n;i++){
         cin >> arr[i];

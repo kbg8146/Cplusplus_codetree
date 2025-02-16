@@ -5,7 +5,7 @@ int main() {
     // Please write your code here.
     int n;
     cin >> n;
-    int arr[11]={};
+    int arr[101]={};
     int count_arr[101]={};
 
     for(int i=1;i<=n;i++){

@@ -6,7 +6,7 @@ int main() {
     int n;
     cin >> n;
     int arr[11]={};
-    int count_arr[11]={};
+    int count_arr[101]={};
 
     for(int i=1;i<=n;i++){
         cin >> arr[i];

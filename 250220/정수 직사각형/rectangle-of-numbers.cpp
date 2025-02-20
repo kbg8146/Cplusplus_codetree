@@ -18,7 +18,7 @@ int main() {
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cout << arr[i][j] << " ";
-            if(j==2){
+            if(arr[i][j]%3==0){
                 cout << endl;
             }
         }

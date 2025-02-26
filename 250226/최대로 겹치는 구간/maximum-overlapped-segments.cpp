@@ -6,7 +6,7 @@ int main() {
     int N;
     int n;
     int k;
-    int arr[101]={0,};
+    int arr[220]={0,};
     cin >> N;
     for(int i=1;i<=N;i++){
         cin >> n >> k;
@@ -15,7 +15,7 @@ int main() {
         }
     }
     int answer=0;
-    for(int i=1;i<101;i++){
+    for(int i=1;i<220;i++){
         if(answer<arr[i]){
             answer=arr[i];
         }

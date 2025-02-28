@@ -10,18 +10,20 @@ int main() {
     int ny=0;
     int dir_num=3;
 
-    cin >> dir >> dis;
-    if(dir=='L'){
-        dir_num-=1;
+    while(1){
+        cin >> dis;
+        if(dis=='F'){
+            nx+=dx[dir_num];
+            ny+=dy[dir_num];
+            break;
+        }
+        else if(dis=='L'){
+            dir_num = (dir_num+3)%4;
+        }
+        else if(dis =='R'){
+            dir_num = (dir_num+1)%4;
+        }
     }
-    else if(dir =='R'){
-        dir_num+=1;
-    }
-    if(dis=='F'){
-        nx+=dx[dir_num];
-        ny+=dy[dir_num];
-    }
-    
     cout << nx << " " << ny;
 
     return 0;

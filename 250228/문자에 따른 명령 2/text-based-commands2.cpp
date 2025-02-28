@@ -21,6 +21,7 @@ int main() {
         nx+=dx[dir_num];
         ny+=dy[dir_num];
     }
+    
     cout << nx << " " << ny;
 
     return 0;

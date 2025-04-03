@@ -3,12 +3,16 @@
 using namespace std;
 
 bool leapYear(int Y){
-    if(Y%4==0 && Y%100==0 && Y%400==0)
-        return true;
-    if(Y%4==0)
-        if(Y%100==0)
+    if(Y%4==0){
+        if(Y%100==0){
+                if(Y%400==0){
+                    return true;
+                }
             return false;
+        }
         return true;
+    }
+    return false;
 }
 
 bool exist(int Y,int M,int D){
@@ -36,8 +40,13 @@ bool exist(int Y,int M,int D){
                 return true;
             }
         }
-        else if(M==2||M==4||M==6||M==9||M==11){
+        else if(M==4||M==6||M==9||M==11){
             if(D<=30){
+                return true;
+            }
+        }
+        else{
+            if(D<=28){
                 return true;
             }
         }

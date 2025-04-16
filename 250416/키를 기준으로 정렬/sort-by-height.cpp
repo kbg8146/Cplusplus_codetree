@@ -1,46 +1,54 @@
 #include <iostream>
 #include <algorithm>
+#include <string>
+
+#define MAXN 10
+
 using namespace std;
 
-class Student {
+// 학생들의 정보를 나타내는 클래스 선언
+class Student{
     public:
         string name;
-        int height,weight;
-        
-        Student(string name, int hei, int wei){
+        int height;
+        int weight;
+        Student(string name, int height, int weight) {
             this->name = name;
-            this->height = hei;
-            this->weight = wei;
+            this->height = height;
+            this->weight = weight;
         }
-        Student(){}
+		Student(){}
 };
 
-bool cmp(Student a, Student b){
+// Custom Comparator
+bool Cmp(Student a, Student b) {
+    // 키를 기준으로 오름차순으로 정렬합니다.
     return a.height < b.height;
 }
 
-Student students[10];
+Student students[MAXN];
 
-int main() {
-    int num;
-    cin >> num;
-    string name;
-    int height;
-    int weight;
+int main(){
+    int n;
+    cin >> n;
 
-    
-    for(int i=0;i<num;i++){
-
+    for (int i = 0; i < n; i++){
+        string name;
+        int height, weight;
         cin >> name >> height >> weight;
-        students[i] =Student(name,height,weight);
-
+        // Student 객체를 생성해 리스트에 추가합니다.
+        students[i] = Student(name, height, weight);
     }
 
-    sort(students, students +num, cmp);
+    // custom comparator를 활용한 정렬
+    sort(students, students + n, Cmp);
 
-    for(int i=0;i<5;i++)
-        cout << students[i].name << " " << students[i].height << " " << students[i].weight << endl;
+    // 결과를 출력합니다.
+    for (int i = 0; i < n; i++){
+        cout << students[i].name << " ";
+        cout << students[i].height << " ";
+        cout << students[i].weight << endl;
+    }
 
-    // Please write your code here.
     return 0;
 }

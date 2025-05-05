@@ -16,17 +16,9 @@ class Student{
 };
 
 bool cmp(Student a, Student b){
-    if(a.h>b.h){
-        return a.h>b.h;
-    }
-    else if(a.h==b.h){
-        if(a.w>b.w){
-            return a.w > b.w;
-        }
-        else if(a.n<b.n){
-            return a.n < b.n;
-        }
-    }
+    if(a.h != b.h) return a.h > b.h;
+    if(a.w != b.w) return a.w > b.w;
+    return a.n < b.n;
 }
 
 int main() {

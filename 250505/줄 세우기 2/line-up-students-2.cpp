@@ -25,13 +25,13 @@ int main() {
     int h,w,n;
     for(int i=0;i<N;i++){
         cin >> h >> w;
-        n=i;
+        n=i+1;
         students[i]=Student(h,w,n);
     }
     sort(students,students+N,cmp);
 
     for(int i=0;i<N;i++){
-        cout << students[i].h << " " << students.w << " " << students.n << endl;
+        cout << students[i].h << " " << students[i].w << " " << students[i].n << endl;
     }
     // Please write your code here.
     return 0;

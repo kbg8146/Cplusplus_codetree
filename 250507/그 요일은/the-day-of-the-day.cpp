@@ -20,7 +20,7 @@ int main() {
         }
     }
 
-    // 날짜 차이를 일수로 계산
+    // 총 날짜 수 계산
     int total_days = 0;
     if (m1 == m2) {
         total_days = d2 - d1;
@@ -32,9 +32,15 @@ int main() {
         total_days += d2; // 마지막 달 일수
     }
 
-    // total_days를 7로 나눈 몫 + 1 (해당 요일 포함 주 수)
-    int result = (start_day_idx + total_days) / 7;
+    // 요일 계산
+    int count = 0;
+    for(int i = 0; i <= total_days; i++) {
+        int current_day_idx = (start_day_idx + i) % 7;
+        if(name_of_days[current_day_idx] == start_day) {
+            count++;
+        }
+    }
 
-    cout << result << endl;
+    cout << count << endl;
     return 0;
 }

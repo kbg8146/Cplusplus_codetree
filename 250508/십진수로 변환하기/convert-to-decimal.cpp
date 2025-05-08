@@ -1,15 +1,15 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    for(int i=0;i<8;i++){
-        cin >> binary[i];
-    }
+    string bin;
+    cin >> bin;
+
     int num = 0;
-
-    for(int i=0;i<5;i++)
-        num = num*2+binary[i];
-
+    for(int i=0;i<bin.length();i++){
+        num = num*2 + (bin[i]-'0');
+    }
     cout << num;
     // Please write your code here.
     return 0;

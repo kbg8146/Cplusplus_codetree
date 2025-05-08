@@ -12,7 +12,6 @@ int main() {
     for(int i=0;i<N.length();i++){
         num = num*A + (N[i]-'0');
     }
-    cout << num << endl;
 
     int ans[100]={};
     int cnt=0;

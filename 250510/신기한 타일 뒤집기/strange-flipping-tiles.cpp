@@ -8,8 +8,8 @@ int main() {
     cin >> N;
     string dir;
     int n;
-    int arr[100]={0};
-    int j=50;
+    int arr[5000]={0};
+    int j=2500;
 
 
     for(int i=0;i<N;i++){
@@ -31,7 +31,7 @@ int main() {
     }
     int black=0;
     int white=0;
-    for(int i=0;i<100;i++){
+    for(int i=0;i<5000;i++){
         if(arr[i]==2){
             white++;
         }

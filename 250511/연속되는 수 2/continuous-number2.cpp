@@ -5,7 +5,7 @@ int main() {
     int N;
     cin >> N;
     int n;
-    int cnt=0;
+    int cnt=1;
     int a[1010]={0};
     int big=0;
     for(int i=0;i<N;i++){
@@ -13,18 +13,15 @@ int main() {
 
         if(i==0||a[i] != a[i-1]){
             if(cnt>big){
-                cnt++;
                 big=cnt;
             }
-            cnt=0;
+            cnt=1;
         }
         else{
             cnt++;
             
         }
     }
-
-
     cout << big;
 
     // Please write your code here.

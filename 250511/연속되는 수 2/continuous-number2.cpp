@@ -22,6 +22,9 @@ int main() {
             
         }
     }
+    if(cnt>big){
+        big=cnt;
+    }
     cout << big;
 
     // Please write your code here.

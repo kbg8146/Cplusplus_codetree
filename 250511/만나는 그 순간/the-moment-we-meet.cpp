@@ -1,57 +1,52 @@
 #include <iostream>
-#include <string>
+
+#define MAX_T 1000000
+
 using namespace std;
 
-int main() {
-    int N,M;
-    cin >> N >> M;
+int n,m;
+int pos_a[MAX_T+1],pos_b[MAX_T+1];
 
-    int a[2010000]={0};
-    int b[2010000]={0};
+int main(){
+    cin >> n >> m;
 
-    string dir;
-    int step=0;
-    int timeA=0;
-    int timeB=0;
-    int stateA=1005000;
-    int stateB=1005000;
-    int result=-1;
-    for(int i=0;i<N;i++){
-        cin >> dir >> step;
-        if(dir=="R"){
-            for(int k=1;k<=step;k++){
-                a[stateA++]=timeA++;
-            }
-        }
-        else if(dir=="L"){
-            for(int k=1;k<=step;k++){
-                a[stateA--]=timeA++;
-            }
-        }
-        
-    }
-    for(int j=0;j<M;j++){
-        cin >> dir>> step;
+    int time_a = 1;
+    for(int i=0;i<n;i++){
+        char d; int t;
+        cin >> d >> t;
 
-        if(dir=="R"){
-            for(int k=1;k<=step;k++){
-                b[stateB++]=timeB++;
-            }
-        }
-        else if(dir=="L"){
-            for(int k=1;k<=step;k++){
-                b[stateB--]=timeB++;
-            }
+        while(t--){
+            if(d=='R')
+                pos_a[time_a]=pos_a[time_a-1]+1;
+            else if(d=='L')
+                pos_b[time_a]=pos_b[time_a-1]-1;
+            time_a++;
         }
     }
 
-    for(int i=0;i<2010000;i++){
-        if(a[i]==b[i]&&a[i]!=0&&b[i]!=0){
-            result = a[i];
+    int time_b = 1;
+    for(int i=0;i<m;i++){
+        char d; int t;
+        cin >> d >> t;
+
+        while(t--){
+            if(d=='R')
+                pos_a[time_b]=pos_a[time_b-1]+1;
+            else if(d=='L')
+                pos_b[time_b]=pos_b[time_b-1]-1;
+
+            time_b++;
+        }
+    }
+
+    int ans = -1;
+    for(int i=1;i<time_a;i++){
+        if(pos_a[i] == pos_b[i]){
+            ans=i;
             break;
         }
     }
-    cout << result;
-    // Please write your code here.
+
+    cout << ans;
     return 0;
 }

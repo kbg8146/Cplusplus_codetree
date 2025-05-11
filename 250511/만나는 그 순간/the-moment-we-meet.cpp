@@ -6,15 +6,15 @@ int main() {
     int N,M;
     cin >> N >> M;
 
-    int a[2010]={0};
-    int b[2010]={0};
+    int a[2010000]={0};
+    int b[2010000]={0};
 
     string dir;
     int step=0;
     int timeA=0;
     int timeB=0;
-    int stateA=1005;
-    int stateB=1005;
+    int stateA=1005000;
+    int stateB=1005000;
     int result=-1;
     for(int i=0;i<N;i++){
         cin >> dir >> step;
@@ -45,7 +45,7 @@ int main() {
         }
     }
 
-    for(int i=0;i<2010;i++){
+    for(int i=0;i<2010000;i++){
         if(a[i]==b[i]&&a[i]!=0&&b[i]!=0){
             result = a[i];
             break;

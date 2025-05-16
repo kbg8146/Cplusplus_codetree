@@ -19,7 +19,7 @@ int main() {
            // cout << Av << " ";
         }
     }
-    timeB=1;
+    int timeB=1;
     //cout << endl;
     for(int i=0;i<M;i++){
         cin >> Bv >> Bt;

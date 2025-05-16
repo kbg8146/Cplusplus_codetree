@@ -29,11 +29,18 @@ int main() {
         }
     }
     //cout << endl;
+    int time=0;
+    if(timeA>timeB){
+        time=timeA;
+    }
+    else{
+        time=timeB;
+    }
     int cnt=0;
     int sumA=0;
     int sumB=0;
-    int compare[10004]={0};
-    for(int i=1;i<10004;i++){
+    int compare[time+1]={0};
+    for(int i=1;i<=time;i++){
         sumA+=A[i];
         sumB+=B[i];
 

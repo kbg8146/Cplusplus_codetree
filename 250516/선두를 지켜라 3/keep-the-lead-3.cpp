@@ -34,7 +34,7 @@ int main() {
     int cnt=0;
     int sumA=0;
     int sumB=0;
-    int compare[1000004]={0};
+    int compare[100004]={0};
     for(int i=1;i<=time;i++){
         sumA+=A[i];
         sumB+=B[i];

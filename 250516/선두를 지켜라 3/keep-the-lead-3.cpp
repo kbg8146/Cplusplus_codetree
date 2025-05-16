@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -29,13 +30,7 @@ int main() {
         }
     }
     //cout << endl;
-    int time=0;
-    if(timeA>timeB){
-        time=timeA;
-    }
-    else{
-        time=timeB;
-    }
+    int time = max(timeA,timeB);
     int cnt=0;
     int sumA=0;
     int sumB=0;

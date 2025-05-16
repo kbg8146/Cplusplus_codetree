@@ -32,8 +32,8 @@ int main() {
     int cnt=0;
     int sumA=0;
     int sumB=0;
-    int compare[1004]={0};
-    for(int i=1;i<1004;i++){
+    int compare[10000004]={0};
+    for(int i=1;i<1000004;i++){
         sumA+=A[i];
         sumB+=B[i];
 

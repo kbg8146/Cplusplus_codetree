@@ -6,8 +6,8 @@ int main() {
     int N, M;
     cin >> N >> M;
     //cout << N << " " << M << endl;
-    int A[10004]={0};
-    int B[10004]={0};
+    int A[10000004]={0};
+    int B[10000004]={0};
     int Av=0;
     int At=0;
     int Bv=0;
@@ -34,7 +34,7 @@ int main() {
     int cnt=0;
     int sumA=0;
     int sumB=0;
-    int compare[1004]={0};
+    int compare[10000004]={0};
     for(int i=1;i<=time;i++){
         sumA+=A[i];
         sumB+=B[i];
@@ -50,7 +50,7 @@ int main() {
         }
         //cout << sumA << " + " << A[i] << endl;
         
-        if(compare[i]!=compare[i-1] /*&& compare[i]!=0*/){
+        if(compare[i]!=compare[i-1] ){
             cnt++;
         }
     }

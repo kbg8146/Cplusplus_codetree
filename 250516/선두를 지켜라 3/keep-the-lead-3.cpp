@@ -5,8 +5,8 @@ int main() {
     int N, M;
     cin >> N >> M;
     //cout << N << " " << M << endl;
-    int A[10000004]={0};
-    int B[10000004]={0};
+    int A[10004]={0};
+    int B[10004]={0};
     int Av=0;
     int At=0;
     int Bv=0;

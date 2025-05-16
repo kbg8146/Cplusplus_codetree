@@ -14,8 +14,8 @@ int main() {
     int answer[101][101]={0};
 
 
-    int dx[4]={1,0,-1,0};
-    int dy[4]={0,-1,0,1};
+    int dx[4]={0,1,0,-1};
+    int dy[4]={1,0,-1,0};
     int x=0,y=0;
     int dir_num = 0;
 

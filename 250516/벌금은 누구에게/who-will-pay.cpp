@@ -10,7 +10,7 @@ int main() {
     for(int i=0;i<M;i++){
         cin >> name;
         student[name]++;
-        if(student[name]==3){
+        if(student[name]==K){
             cout << name;
             return 0;
             

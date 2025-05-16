@@ -11,20 +11,20 @@ int main() {
     int At=0;
     int Bv=0;
     int Bt=0;
-    int time=1;
+    int timeA=1;
     for(int i=0;i<N;i++){
         cin >> Av >> At;
         for(int j=1;j<=At;j++){
-            A[time++]=Av;
+            A[timeA++]=Av;
            // cout << Av << " ";
         }
     }
-    time=1;
+    timeB=1;
     //cout << endl;
     for(int i=0;i<M;i++){
         cin >> Bv >> Bt;
         for(int j=1;j<=Bt;j++){
-            B[time++]=Bv;
+            B[timeB++]=Bv;
             //cout << Bv << " ";
         }
     }

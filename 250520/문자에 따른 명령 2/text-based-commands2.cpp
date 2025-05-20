@@ -8,7 +8,7 @@ int main() {
 
     int dx[4]={0,1,0,-1};
     int dy[4]={1,0,-1,0};
-    int dir_num=4;
+    int dir_num=50000;
     int x=0,y=0;
 
     if(dir=='R'){

@@ -20,12 +20,12 @@ int main() {
         }
 
         if(dir=='F'){       
-            x = x + dx[dir_num];
-            y = y + dy[dir_num];
             break;
         }
 
     }
+    x = x + dx[dir_num];
+    y = y + dy[dir_num];
     cout << x << " " << y;
 
     return 0;

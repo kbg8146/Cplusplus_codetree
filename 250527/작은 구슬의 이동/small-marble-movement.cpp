@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int dx[4]={1,0,-1,0},dy[4]={0,-1,0,1};
+int dx[4]={0,-1,0,1},dy[4]={1,0,-1,0};
 
 int GetDir(char a){
     if(a=='R'){
@@ -10,7 +10,7 @@ int GetDir(char a){
     else if(a=='D'){
         return 1;
     }
-    else if(a=='U'){
+    else if(a=='L'){
         return 2;
     }
     else{
@@ -28,18 +28,24 @@ int main() {
     
     cin >> N >> T;
     cin >> R >> C >> D;
-    int x=R;
-    int y=C;
+    int x=R-1;
+    int y=C-1;
     int nx,ny;
+    int dir_num = GetDir(D);
     for(int i=0;i<T;i++){
-        nx=x+dx[GetDir(D)];
-        ny=y+dy[GetDir(D)];
-        if(InRange(nx,ny)){
+        nx=x+dx[dir_num];
+        ny=y+dy[dir_num];
+
+        if(InRange(nx,ny)){        
             x=nx;
             y=ny;
-        }   
+        }
+        else{
+            dir_num=(dir_num+2)%4;
+        }
+        //cout << x << y << endl;
     }
-    cout << x << " " << y;
+    cout << x+1 << " " << y+1;
 
     return 0;
 }

@@ -21,7 +21,7 @@ int main() {
         else if(dir=='F'){   
             x = x + dx[dir_num];
             y = y + dy[dir_num];    
-            break;
+
         }
 
     }

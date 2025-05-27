@@ -51,7 +51,7 @@ int main() {
             dir_num=(dir_num+1)%4;
         }
         else if(dirs[i]=='L'){
-            dir_num=(dir_num-1)%4;
+            dir_num=(dir_num+3)%4;
         }
         
 

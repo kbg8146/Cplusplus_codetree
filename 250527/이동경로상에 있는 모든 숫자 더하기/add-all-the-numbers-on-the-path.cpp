@@ -16,14 +16,8 @@ int GetDirNum(char dir){
     if(dir=='R'){
         return 0;
     }
-    else if(dir=='D'){
-        return 1;
-    }
     else if(dir=='L'){
         return 2;
-    }
-    else if(dir=='U'){
-        return 3;
     }
     return -1;
 }
@@ -31,17 +25,18 @@ int GetDirNum(char dir){
 int main() {
     cin >> N >> T;
     cin >> dirs;
-    int sum=arr[x][y];
+
     int x=N/2;
     int y=N/2;
+
     int dir_num=0;
     for(int i=0;i<N;i++){
         for(int j=0;j<N;j++){
             cin >> arr[i][j];
         }
-    }
+    }    
+    int sum=arr[x][y];
     for(int i=0;i<T;i++){
-
 
         if(dirs[i]=='F'){
             int nx = x+dx[dir_num];
@@ -52,8 +47,11 @@ int main() {
                 sum+=arr[x][y];
             }
         }
-        else{
-            dir_num=GetDirNum(dirs[i]);
+        else if(dirs[i]=='R'){
+            dir_num=(dir_num+1)%4;
+        }
+        else if(dirs[i]=='L'){
+            dir_num=(dir_num-1)%4;
         }
         
 

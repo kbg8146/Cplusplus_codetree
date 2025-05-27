@@ -31,9 +31,9 @@ int GetDirNum(char dir){
 int main() {
     cin >> N >> T;
     cin >> dirs;
-    int sum=0;
-    int x=N/2+1;
-    int y=N/2+1;
+    int sum=arr[x][y];
+    int x=N/2;
+    int y=N/2;
     int dir_num=0;
     for(int i=0;i<N;i++){
         for(int j=0;j<N;j++){
@@ -41,16 +41,19 @@ int main() {
         }
     }
     for(int i=0;i<T;i++){
-        dir_num=dirAct(dirs[i]);
 
-        if(dir=='F'){
+
+        if(dirs[i]=='F'){
             int nx = x+dx[dir_num];
-            int ny = x+dy[dir_num];
+            int ny = y+dy[dir_num];
             if(InRange(nx,ny)){
-                x+=nx;
-                y+=ny;
+                x=nx;
+                y=ny;
                 sum+=arr[x][y];
             }
+        }
+        else{
+            dir_num=GetDirNum(dirs[i]);
         }
         
 

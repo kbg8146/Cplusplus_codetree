@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int dx[4]={0,-1,0,1},dy[4]={1,0,-1,0};
+int dx[4]={0,1,0,-1},dy[4]={1,0,-1,0};
 
 int GetDir(char a){
     if(a=='R'){

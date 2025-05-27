@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+int N,T;
+string dirs;
+int arr[99][99]={0};
+
+int dx[4]={1,0,-1,0};
+int dy[4]={0,-1,0,1};
+
+bool InRange(int x, int y){
+    return (0<=x && x<N && 0<=y && y<N);
+}   
+
+int GetDirNum(char dir){
+    if(dir=='R'){
+        return 0;
+    }
+    else if(dir=='D'){
+        return 1;
+    }
+    else if(dir=='L'){
+        return 2;
+    }
+    else if(dir=='U'){
+        return 3;
+    }
+    return -1;
+}
+
+int main() {
+    cin >> N >> T;
+    cin >> dirs;
+    int sum=0;
+    int x=N/2+1;
+    int y=N/2+1;
+    int dir_num=0;
+    for(int i=0;i<N;i++){
+        for(int j=0;j<N;j++){
+            cin >> arr[i][j];
+        }
+    }
+    for(int i=0;i<T;i++){
+        dir_num=dirAct(dirs[i]);
+
+        if(dir=='F'){
+            int nx = x+dx[dir_num];
+            int ny = x+dy[dir_num];
+            if(InRange(nx,ny)){
+                x+=nx;
+                y+=ny;
+                sum+=arr[x][y];
+            }
+        }
+        
+
+    }
+    cout << sum;
+    // Please write your code here.
+    return 0;
+}

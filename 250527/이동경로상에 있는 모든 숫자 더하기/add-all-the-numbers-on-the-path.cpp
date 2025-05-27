@@ -11,7 +11,7 @@ int dy[4]={0,-1,0,1};
 bool InRange(int x, int y){
     return (0<=x && x<N && 0<=y && y<N);
 }   
-
+/*
 int GetDirNum(char dir){
     if(dir=='R'){
         return 0;
@@ -21,7 +21,7 @@ int GetDirNum(char dir){
     }
     return -1;
 }
-
+*/
 int main() {
     cin >> N >> T;
     cin >> dirs;

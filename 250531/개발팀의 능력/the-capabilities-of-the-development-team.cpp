@@ -35,10 +35,10 @@ int main() {
             for(int k=0;k<5;k++)
                 diff_ans = min(diff_ans,Diff(i,j,k));
 
-            if(diff_ans==INT_MAX)
-                cout << -1;
-            else
-                cout <<diff_ans;
+    if(diff_ans==INT_MAX)
+        cout << -1;
+    else
+        cout << diff_ans;
 
     // Please write your code here.
     return 0;

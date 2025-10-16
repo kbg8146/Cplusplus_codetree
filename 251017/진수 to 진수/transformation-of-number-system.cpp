@@ -22,7 +22,7 @@ int main() {
             break;
         }
 
-        x[j++]=num%2;
+        x[j++]=num%B;
         num=num/B;
     }
 

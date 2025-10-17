@@ -5,46 +5,42 @@
 
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
+int n;
+int x;
+char dir;
+int cur = MID;
+int arr[FULL]={0};
+int w=0;
+int b=0;
 
-    int x;
-    char dir;
-    int cur= MID;
-    int arr[FULL]={0};
+int main() {
+    cin >> n;
 
     for(int i=0;i<n;i++){
         cin >> x >> dir;
 
         if(dir=='L'){
             while(x--){
-                arr[cur]=1; 
+                arr[cur]=1;
                 if(x) cur--;
             }
-            
         }
         else{
             while(x--){
                 arr[cur]=2;
-                if(x) cur++;                
+                if(x) cur++;
             }
-
         }
-    
     }
-    int whi=0;
-    int bla=0;
-
     for(int i=0;i<FULL;i++){
         if(arr[i]==1){
-            whi++;
+            w++;
         }
         else if(arr[i]==2){
-            bla++;
+            b++;
         }
     }
-    cout << whi << " " << bla;
+    cout << w << " " << b;
     // Please write your code here.
     return 0;
 }

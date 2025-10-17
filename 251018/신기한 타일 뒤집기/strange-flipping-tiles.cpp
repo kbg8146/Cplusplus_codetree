@@ -25,8 +25,11 @@ int main() {
             
         }
         else{
-            arr[cur]=2;
-            if(x) cur++;
+            while(x--){
+                arr[cur]=2;
+                if(x) cur++;                
+            }
+
         }
     
     }

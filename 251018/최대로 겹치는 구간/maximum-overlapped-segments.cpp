@@ -6,11 +6,11 @@ int main() {
     cin >> n;
 
     int a, b;
-    int bmax=0;
+    int bmax=-101;
     int arr[1000]={0};
     for(int i=0;i<n;i++){
         cin >> a >> b;
-        if(b>=bmax){
+        if(b>bmax){
             bmax=b;
         }
         for(int j=a;j<b;j++){

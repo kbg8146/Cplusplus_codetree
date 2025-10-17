@@ -17,14 +17,18 @@ int main() {
     for(int i=0;i<n;i++){
         cin >> x >> dir;
 
-        for(int j=0;j<x;j++){
-            if(dir=='L'){
-                arr[cur--]=1;
+        if(dir=='L'){
+            while(x--){
+                arr[cur]=1; 
+                if(x) cur--;
             }
-            else{
-                arr[cur++]=2;
-            }
+            
         }
+        else{
+            arr[cur]=2;
+            if(x) cur++;
+        }
+    
     }
     int whi=0;
     int bla=0;

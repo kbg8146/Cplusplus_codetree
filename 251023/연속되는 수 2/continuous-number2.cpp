@@ -13,8 +13,8 @@ int main() {
 
     int cnt=1;
     int tmp=arr[0];
-    int result=0;
-    for(int i=1;i<N-1;i++){
+    int result=1;
+    for(int i=1;i<N;i++){
         if(arr[i]==tmp){
             cnt++;
         }

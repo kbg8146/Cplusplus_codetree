@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -10,24 +11,18 @@ int main() {
     for (int i = 0; i < N; i++) {
         cin >> arr[i];
     }
-
-    int cnt=1;
-    int tmp=arr[0];
-    int result=1;
-    for(int i=1;i<N;i++){
-        if(arr[i]==tmp){
+    int ans=0; int cnt=0;
+    for(int i=0;i<N;i++){
+        if(i>=1 && arr[i]==arr[i-1]){
             cnt++;
         }
         else{
             cnt=1;
         }
-        if(cnt>=result){
-            result=cnt;
-        }
-        tmp=arr[i];
+        ans= max(ans,cnt);
     }
-    cout << result;
 
+    cout << ans;
     // Please write your code here.
 
     return 0;

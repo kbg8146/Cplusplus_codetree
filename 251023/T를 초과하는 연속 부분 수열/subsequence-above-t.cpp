@@ -20,9 +20,9 @@ int main() {
         else{
             cnt=0;
         }
-        ans = max(cnt,ans);
+        ans = max(ans,cnt);
     }
-    cout << cnt;
+    cout << ans;
     // Please write your code here.
 
     return 0;

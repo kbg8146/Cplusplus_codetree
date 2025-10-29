@@ -44,10 +44,11 @@ int main() {
     int ans = -1;
     for(int i=1;i<time_a;i++){
         if(a[i]==b[i]){
-            cout << i;
+            ans = i;
             break;
         }
     }
+    cout << ans;
     // Please write your code here.
     return 0;
 }

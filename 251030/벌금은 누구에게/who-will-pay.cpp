@@ -13,7 +13,7 @@ int main() {
         cin >> num;
         student[num]+=1;
         if(student[num]>=k){
-            ans = i;
+            ans = num;
             break;
         }
     }

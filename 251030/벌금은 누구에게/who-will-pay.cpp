@@ -11,7 +11,7 @@ int main() {
     int num;
     for(int i=0;i<m;i++){
         cin >> num;
-        student[num]++;
+        student[num]+=1;
     }
 
     int ans=-1;

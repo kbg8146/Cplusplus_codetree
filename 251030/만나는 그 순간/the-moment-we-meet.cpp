@@ -40,7 +40,8 @@ int main() {
         }
     }
     int ans=-1;
-    for(int i=1;i<atime;i++){
+    int maxtime=min(atime,btime);
+    for(int i=1;i<maxtime;i++){
         if(a[i]==b[i]){
             ans = i;
             break;

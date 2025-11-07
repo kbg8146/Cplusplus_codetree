@@ -21,7 +21,7 @@ int main() {
                 for(int l=j+1;l<C-1;l++){
                     if(arr[0][0] != arr[i][j] &&
                     arr[i][j] != arr[k][l] &&
-                    arr[k][l] != arr[R][C]){
+                    arr[k][l] != arr[R-1][C-1]){
                         cnt++;
                     }
                 }

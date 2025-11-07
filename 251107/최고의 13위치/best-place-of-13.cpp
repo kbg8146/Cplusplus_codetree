@@ -18,8 +18,9 @@ int main() {
     for(int i=0;i<N;i++){
         for(int j=0;j<N-2;j++){
             int sum = arr[i][j]+arr[i][j+1]+arr[i][j+2];
+            most = max(most, sum);
         }
-        most = max(most, sum);
+        
     }
     cout << most;
     // Please write your code here.

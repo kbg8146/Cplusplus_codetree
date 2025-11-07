@@ -1,6 +1,4 @@
 #include <iostream>
-#include <climits>
-#include <algorithm>
 #include <string>
 using namespace std;
 
@@ -9,13 +7,13 @@ string arr;
 int main() {
     cin >> arr;
 
+    int n = (int) arr.size();
+
     int cnt=0;
-    for(int i=0;i<arr.size()-1;i++){
-        if(arr[i]=='('){
-            for(int j=i+1;j<arr.size();j++){
-                if(arr[j]==')'){
-                    cnt++;
-                }
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]=='(' && arr[j]==')'){
+                cnt++;
             }
         }
     }

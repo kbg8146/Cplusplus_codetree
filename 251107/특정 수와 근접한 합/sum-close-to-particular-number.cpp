@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <climits>
 using namespace std;
 
 int arr[101];
@@ -14,7 +14,7 @@ int main() {
         sum += arr[i];
     }
 
-    int near = 101;
+    int near = INT_MAX;
     for(int i=0;i<N;i++){
         for(int j=i+1;j<N;j++){
             int two = arr[i]+arr[j];

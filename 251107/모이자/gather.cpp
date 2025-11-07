@@ -14,17 +14,15 @@ int main() {
         cin >> arr[i];
     }
 
-    int dist=0,least=100000;
+    int ans=INT_MAX;
     for(int i=1;i<=N;i++){
-        dist=0;
+        int dist=0;
         for(int j=1;j<=N;j++){
             dist+=abs(i-j)*arr[j];
         }
-        if(dist<=least){
-            least = dist;
-        }
+        ans = min(ans,dist);
     }
-    cout << least;
+    cout << ans;
 
     // Please write your code here.
     return 0;

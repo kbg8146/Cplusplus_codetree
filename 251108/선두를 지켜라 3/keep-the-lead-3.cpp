@@ -28,7 +28,7 @@ int main() {
         }
     }
 
-    int leader=0,cnt=0;
+    int leader=-1,cnt=0;
     for(int i=0;i<max(atime,btime);i++){
         if(a[i]>b[i]){
             if(leader != 1){

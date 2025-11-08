@@ -44,10 +44,10 @@ int main() {
             leader =2;
         }
         else{
-            if(leader != 0){
+            if(leader != 3){
                 cnt++;
             }
-            leader =0;
+            leader =3;
             
         }
     }

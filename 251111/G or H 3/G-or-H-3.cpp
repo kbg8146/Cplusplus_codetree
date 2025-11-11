@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algoritm>
+#include <algorithm>
 #define MAX_NUM 10000
 using namespace std;
 

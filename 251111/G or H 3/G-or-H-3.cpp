@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char arr[10100];
+char arr[10100000];
 
 int main() {
 

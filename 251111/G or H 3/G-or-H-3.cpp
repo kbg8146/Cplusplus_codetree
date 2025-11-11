@@ -1,7 +1,8 @@
 #include <iostream>
+#define MAX_NUM 10000
 using namespace std;
 
-int arr[10000];
+int arr[MAX_NUM+1];
 
 int main() {
 

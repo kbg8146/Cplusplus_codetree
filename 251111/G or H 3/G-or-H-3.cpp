@@ -21,7 +21,7 @@ int main() {
             arr[pos]=2;
     }
     int most = 0;
-    for(int i=1;i<=MAX_NUM-K+1;i++){
+    for(int i=1;i<=MAX_NUM-K;i++){
         int sum = 0;
         for(int j=i;j<=i+K;j++){
             sum += arr[j];

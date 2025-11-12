@@ -29,10 +29,11 @@ int main() {
 
     int least = INT_MAX;
     for(int i=0;i<5;i++){
-        for(int j=i+1;j<5;j++){
-            for(int k=j+1;k<5;k++){
-                least = min(least,Diff(i,j,k));
-
+        for(int j=0;j<5;j++){
+            for(int k=0;k<5;k++){
+                if(i!=j && j != k && i != k){
+                    least = min(least,Diff(i,j,k));                    
+                }
             }
         }
     }

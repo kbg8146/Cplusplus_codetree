@@ -10,16 +10,16 @@ int Diff(int i, int j, int k){
     group2 = arr[k];
     group3 = sum - group1 - group2;
 
-    if(group1 == group2 && group2 == group3){
-        return -1;
+    if(group1 == group2 || group2 == group3 || group1 == group3){
+        return INT_MAX;
     }
+
     tmp = min(group1, group2);
     int least = min(tmp, group3);
     tmp = max(group1,group2);
     int most = max(tmp,group3);
     return abs(most-least);
 }
-
 
 int main() {
     for(int i=0;i<5;i++){
@@ -32,10 +32,17 @@ int main() {
         for(int j=i+1;j<5;j++){
             for(int k=j+1;k<5;k++){
                 least = min(least,Diff(i,j,k));
+
             }
         }
     }
-    cout << least;
+    if(least == INT_MAX){
+        cout << -1;
+    }
+    else{
+        cout << least;    
+    }
+
     // Please write your code here.
     return 0;
 }

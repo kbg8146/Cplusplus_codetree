@@ -10,12 +10,16 @@ int Diff(int i, int j, int k){
     group2 = arr[k];
     group3 = sum - group1 - group2;
 
+    if(group1 == group2 && group2 == group3){
+        return -1;
+    }
     tmp = min(group1, group2);
     int least = min(tmp, group3);
     tmp = max(group1,group2);
     int most = max(tmp,group3);
     return abs(most-least);
 }
+
 
 int main() {
     for(int i=0;i<5;i++){

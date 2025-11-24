@@ -14,7 +14,7 @@ int main() {
     int answer = 0;
 
     // T는 0 ~ 100
-    for (int T = 0; T <= 100; T++) {
+    for (int T = 0; T <= 1000; T++) {
         int total = 0;
 
         for (int i = 0; i < N; i++) {

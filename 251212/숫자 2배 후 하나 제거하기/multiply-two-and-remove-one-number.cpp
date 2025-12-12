@@ -42,7 +42,7 @@ int main() {
         }
         arr[i] /=2;
     }
-    printf("%d", min_score);v
+    printf("%d", min_score);
     // Please write your code here.
 
     return 0;

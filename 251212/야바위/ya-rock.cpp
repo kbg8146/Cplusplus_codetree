@@ -5,7 +5,7 @@ using namespace std;
 
 int N;
 int a[100], b[100], c[100];
-int arr[4];
+int arr[4]= {0};
 
 
 int main() {
@@ -23,7 +23,8 @@ int main() {
                 point++;
             }
         }
-        arr[j] = 0; 
+        for(int k=1;k<=3;k++)
+            arr[k] = 0; 
         most = max(point,most);
         point = 0;
     }

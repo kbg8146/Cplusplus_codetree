@@ -14,16 +14,24 @@ int main() {
         cin >> arr[i];
     }
     
-    // 1번 위치에서 시작해서 M번 이동하며 값을 더함
-    int sum = 0;
-    int current = 1;
+    int maxSum = 0;
     
-    for (int step = 0; step < m; step++) {
-        sum += arr[current];        // 현재 위치의 값을 합계에 더함
-        current = arr[current];     // 현재 위치의 값이 가리키는 위치로 이동
+    // 모든 시작 위치(1~N)에 대해 시도
+    for (int start = 1; start <= n; start++) {
+        int sum = 0;
+        int current = start;
+        
+        // 현재 시작 위치에서 M번 이동하며 합 계산
+        for (int step = 0; step < m; step++) {
+            sum += arr[current];        // 현재 위치의 값을 합계에 더함
+            current = arr[current];     // 현재 위치의 값이 가리키는 위치로 이동
+        }
+        
+        // 최댓값 갱신
+        maxSum = max(maxSum, sum);
     }
     
-    cout << sum << endl;
+    cout << maxSum << endl;
     
     return 0;
 }

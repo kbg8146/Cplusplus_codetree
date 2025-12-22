@@ -12,7 +12,7 @@ int main() {
     }
 
     int res=INT_MAX; int temp_i=0; int cnt=0; int least = INT_MAX;
-    for(int i=1;i<=10;i++){
+    for(int i=1;i<=b[0]/2;i++){
         cnt = 0;
         temp_i = i;
         for(int j=0;j<n;j++){

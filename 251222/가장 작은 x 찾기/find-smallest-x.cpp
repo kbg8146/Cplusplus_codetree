@@ -24,7 +24,7 @@ int main() {
                 break;
             }
         }
-        if(cnt==4) {
+        if(cnt==n) {
             res = i;
             least = min(res,least);
         }

@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <climits>
 using namespace std;
 
 int n;
@@ -11,18 +11,23 @@ int main() {
         cin >> a[i] >> b[i];
     }
 
-    int res=0; int temp_i=0; int cnt=0;
+    int res=INT_MAX; int temp_i=0; int cnt=0; int least = INT_MAX;
     for(int i=1;i<=10;i++){
+        cnt = 0;
         temp_i = i;
         for(int j=0;j<n;j++){
             temp_i = 2*temp_i;
             if(a[j] <= temp_i && temp_i <= b[j]){
                 cnt++;
             }
-            if(cnt==4) res = i;
+            else{
+                break;
+            }
         }
+        if(cnt==4) res = i;
+        least = min(res,least);
     }
-    cout << res;
+    cout << least;
     // Please write your code here.
 
     return 0;

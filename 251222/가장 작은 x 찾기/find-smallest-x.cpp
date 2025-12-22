@@ -24,8 +24,10 @@ int main() {
                 break;
             }
         }
-        if(cnt==4) res = i;
-        least = min(res,least);
+        if(cnt==4) {
+            res = i;
+            least = min(res,least);
+        }
     }
     cout << least;
     // Please write your code here.

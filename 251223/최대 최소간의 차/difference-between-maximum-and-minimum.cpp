@@ -6,14 +6,8 @@ using namespace std;
 int n, k;
 int arr[100];
 
-
-int main() {
-    cin >> n >> k;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    int sub=0; int least = INT_MAX;  
+int cal(){
+    int sub=0; int least = INT_MAX; 
     for(int j=1;j<=10000-k;j++){
         for(int i=0;i<n;i++){
 
@@ -30,7 +24,18 @@ int main() {
         least = min(least, sub);
         sub=0;
     }
-    cout << least;
+    return least;
+}
+
+int main() {
+    cin >> n >> k;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+     
+
+    cout << cal();
     // Please write your code here.
 
     return 0;

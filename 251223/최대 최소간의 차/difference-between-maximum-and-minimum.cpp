@@ -1,29 +1,25 @@
 #include <iostream>
 #include <climits>
+#include <algorithm>
 
 using namespace std;
 
 int n, k;
 int arr[100];
 
-int cal(){
+int cal(int min, int max){
     int sub=0; int least = INT_MAX; 
-    for(int j=1;j<=10000-k;j++){
-        for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){
 
-            int min = j;
-            int max = j+k;
-
-            if(arr[i]<min){
-                sub += abs(arr[i]-min);
-            }
-            else if(arr[i]>max){
-                sub += abs(arr[i]-max);
-            }
+        if(arr[i]<min){
+            sub += abs(arr[i]-min);
         }
-        least = min(least, sub);
-        sub=0;
+        else if(arr[i]>max){
+            sub += abs(arr[i]-max);
+        }
     }
+    least = std::min(least, sub);
+
     return least;
 }
 
@@ -32,10 +28,11 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-
-     
-
-    cout << cal();
+    int ans=INT_MAX;
+    for(int i=0;i<10000;i++){
+        ans = std::min(ans,cal(i,i+k));
+    }
+    cout << ans;
     // Please write your code here.
 
     return 0;

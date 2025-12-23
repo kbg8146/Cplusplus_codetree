@@ -8,7 +8,7 @@ int n, k;
 int arr[100];
 
 int cal(int min, int max){
-    int sub=0; int least = INT_MAX; 
+    int sub=0;
     for(int i=0;i<n;i++){
 
         if(arr[i]<min){
@@ -18,9 +18,8 @@ int cal(int min, int max){
             sub += abs(arr[i]-max);
         }
     }
-    least = std::min(least, sub);
 
-    return least;
+    return sub;
 }
 
 int main() {
@@ -30,7 +29,7 @@ int main() {
     }
     int ans=INT_MAX;
     for(int i=0;i<10000;i++){
-        ans = std::min(ans,cal(i,i+k));
+        ans = min(ans,cal(i,i+k));
     }
     cout << ans;
     // Please write your code here.

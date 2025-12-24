@@ -14,13 +14,14 @@ int main() {
 
     for(int skip=0;skip<n;skip++){
         int big=INT_MIN; int small = INT_MAX;
+
         for(int i=0;i<n;i++){
             if(i==skip) continue;
 
             big = max(big, x1[i]);
             small = min(small, x2[i]);
         }            
-        if(big=small) {
+        if(big<=small) {
             ans = 1;
         }
     } 

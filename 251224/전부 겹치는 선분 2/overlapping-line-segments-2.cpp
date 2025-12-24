@@ -20,7 +20,7 @@ int main() {
             big = max(big, x1[i]);
             small = min(small, x2[i]);
         }            
-        if(big<small) {
+        if(big=small) {
             ans = 1;
         }
     } 

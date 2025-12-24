@@ -24,6 +24,7 @@ int main() {
             }
 
         }
+        big=0;small=0;
     }
     if(ans==1)
         cout << "Yes";

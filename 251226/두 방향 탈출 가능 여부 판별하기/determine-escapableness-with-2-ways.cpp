@@ -6,33 +6,32 @@
 using namespace std;
 
 int n, m;
-int grid[MAX_NUM][MAX_NUM];
+int grid[100][100];
 bool visited[MAX_NUM][MAX_NUM];
 
 bool InRange(int x, int y){
-    return x >= 0 && x < n && y >= 0 && y <m;
+    return x>=0 && x<n && y>=0 && y<m;
 }
 
 bool CanGo(int x, int y){
-    if(!InRange(x,y))
+    if(!InRange){
         return false;
-
-    if(visited[x][y] || grid[x][y] == 0)
+    }
+    if(visited[x][y]||grid[x][y]==0){
         return false;
-
+    }
     return true;
 }
-
 void DFS(int x, int y){
-    int dx[DIR_NUM] = {0,1};
-    int dy[DIR_NUM] = {1,0};
+    int dx[DIR_NUM]= {0,1};
+    int dy[DIR_NUM]={1,0};
 
     for(int i=0;i<DIR_NUM;i++){
         int new_x = x + dx[i];
         int new_y = y + dy[i];
         if(CanGo(new_x, new_y)){
-            visited[new_x][new_y] = 1;
-            DFS(new_x, new_y);
+            visited[new_x][new_y]=1;
+            DFS(new_x,new_y);
         }
     }
 }

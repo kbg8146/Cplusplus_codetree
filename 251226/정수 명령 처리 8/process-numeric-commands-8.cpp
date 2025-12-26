@@ -25,25 +25,25 @@ int main() {
             l.push_back(A[i]);
         }
         else if(command[i] == "pop_front"){
-            cout << A[i];
+            cout << l.front() << endl;
             l.pop_front(A[i]);
         }
         else if(command[i] == "pop_back"){
-            cout << A[i];
+            cout << l.back() << endl;
             l.pop_back(A[i]);
         }
         else if(command[i] == "size"){
             cout << l.size() << endl;
         }
         else if(command[i] == "empty"){
-            if(l.empty()) cout << 1;
-            else cout << 0;
+            if(l.empty()) cout << 1 << endl;
+            else cout << 0 << endl;
         }
         else if(command[i] == "front"){
-            cout << l.front();
+            cout << l.front() << endl;
         }
         else if(command[i] == "back"){
-            cout << l.back();
+            cout << l.back() << endl;
         }
     }
 

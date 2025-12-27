@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <algorithm>
 using namespace std;
 
 int n;
@@ -7,7 +7,7 @@ int grid[100][100];
 bool visited[100][100];
 int cnt=0;
 int ans=1;
-int num_cnt[100];
+int num_cnt[10000];
 int max_cnt;
 
 int dx[4] = {1,0,-1,0};

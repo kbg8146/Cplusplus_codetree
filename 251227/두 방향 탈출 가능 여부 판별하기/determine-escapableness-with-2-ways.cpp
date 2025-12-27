@@ -4,34 +4,30 @@ using namespace std;
 
 int n, m;
 int grid[100][100];
-bool visited[100][100];
+int visited[100][100];
 
 bool InRange(int x, int y){
-    return 0<=x && x<n && 0<= y && y<m;
+    return 0<=x && x<n && 0<=y && x<m;
 }
 
 bool CanGo(int x, int y){
-    if(!InRange(x, y)){
-        return false;
-    }
-    if(grid[x][y]==0||visited[x][y]==1){
-        return false;
-    }
+    if(!InRange(x,y)) return false;
+    if(grid[x][y]==0 || visited[x][y]==1) return false;
     return true;
 }
 
 void DFS(int x, int y){
-    int dx[2]={0,1};
-    int dy[2]={1,0};
-
+    int dx[2] = {0,1};
+    int dy[2] = {1,0};
     for(int i=0;i<2;i++){
-        int nx = x+dx[i];
-        int ny = y+dy[i];
-
+        int nx = x + dx[i];
+        int ny = y + dy[i];
+    
         if(CanGo(nx,ny)){
-            visited[nx][ny]=true;
+            visited[nx][ny] = 1;
             DFS(nx,ny);
         }
+
     }
 }
 

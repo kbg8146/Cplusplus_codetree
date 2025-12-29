@@ -10,7 +10,7 @@ int main() {
     int dist = 0;
     int cnt = 0;
 
-    while (dist >= X) {
+    while (dist < X) {
         cnt++;        // 시간(초) 증가
         dist += v;    // 현재 속도만큼 이동
 

@@ -14,7 +14,7 @@ int main() {
     }
 
     int k=0;int cnt=0;
-    for(int name=0;name<10;name++){
+    for(int name=1;name<=10;name++){
         for(int i=0;i<N;i++){
             if(pigeon[i]==name){
                 total[name][k++]=position[i];

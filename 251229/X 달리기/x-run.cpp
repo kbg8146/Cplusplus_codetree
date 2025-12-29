@@ -10,11 +10,11 @@ int main() {
     int dist = 0;
     int cnt = 0;
 
-    while (1) {
+    while (dist >= X) {
         cnt++;        // 시간(초) 증가
         dist += v;    // 현재 속도만큼 이동
 
-        if (dist >= X) break; // 목표 도달 시 종료
+        //if (dist >= X) break; // 목표 도달 시 종료
 
         // [핵심 수정] 다음 초에 속도를 결정하는 로직
         // 가속했을 때(v+1) 나중에 속도를 1까지 줄이며 멈출 수 있는지 확인

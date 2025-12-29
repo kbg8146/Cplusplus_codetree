@@ -5,6 +5,7 @@ using namespace std;
 
 int n, m;
 int vertex_cnt;
+
 vector<int> graph[1001];
 bool visited[1001];
 
@@ -29,8 +30,8 @@ int main() {
         graph[v2].push_back(v1);
     }
 
-    visited[0] = 1;
-    DFS(0);
+    visited[1] = 1;
+    DFS(1);
     cout << vertex_cnt;
 
     // Please write your code here.

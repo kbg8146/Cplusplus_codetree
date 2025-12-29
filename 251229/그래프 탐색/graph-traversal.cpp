@@ -20,20 +20,18 @@ void DFS(int vertex){
     }
 }
 
-
 int main() {
     cin >> n >> m;
+
     int v1, v2;
     for (int i = 0; i < m; i++) {
         cin >> v1 >> v2;
         graph[v1].push_back(v2);
         graph[v2].push_back(v1);
     }
-
-    visited[1] = 1;
+    visited[1] = true;
     DFS(1);
     cout << vertex_cnt;
-
     // Please write your code here.
 
     return 0;

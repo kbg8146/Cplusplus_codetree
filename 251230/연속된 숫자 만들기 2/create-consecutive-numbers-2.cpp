@@ -1,49 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int a,b,c;
-int mode;
-
+int a, b, c;
+int x[3];
 int main() {
-    cin >> a >> b >> c;
-    int cnt=0;
+    cin >> x[0] >> x[1] >> x[2];
+    sort(x,x+3);
+    a=x[0];b=x[1];c=x[2];
 
-    if(a>b) swap(a,b);
-    if(a>c) swap(a,c);
-    if(b>c) swap(b,c);
-    if(a+1 == b && b+1 == c){
-        cout << 0;
-        return 0;
-    }
-    if(abs(a-b)>=abs(b-c)&&abs(b-c)>=2){
-        a = b+2;
-        mode = 1;
-    }
-    else if(abs(a-b)<abs(b-c)&&abs(b-a)>=2){
-        c = b-2;
-        mode = 0;
-    }
-    cnt++;
-    while(1){
-        
-        if(a>b) swap(a,b);
-        if(a>c) swap(a,c);
-        if(b>c) swap(b,c);
-
-        if(a+1 == b && b+1 == c) break;
-        if(mode==0){
-            a = b+2;
-            mode=1;
-        }
-        else if(mode == 1){
-            c = b-1;
-            mode=0;
-        }
-        cnt++;
-        //cout << a << " " << b << " " << c;
-    }
-    cout << cnt;
-
+    if(a+1==b && b+1==c) cout << 0;
+    else if((a+1 == b && b+2 == c)||(a+2 == b && b+1 == c)) cout << 1;
+    else cout << 2;
     // Please write your code here.
     return 0;
 }

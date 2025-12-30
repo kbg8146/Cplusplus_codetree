@@ -11,7 +11,7 @@ bool InRange(int x, int y){
 }
 bool CanGo(int x, int y){
     if(!InRange(x,y)) return false;
-    if(!visited[x][y]) return false;
+    if(visited[x][y]) return false;
     if(grid[x][y]==0) return false;
     return true;
 }

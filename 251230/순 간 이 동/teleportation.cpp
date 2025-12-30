@@ -6,7 +6,7 @@ int c1, c2 ,c3;
 int main() {
     cin >> A >> B >> x >> y;
     
-    c1 = B-A;
+    c1 = abs(B-A);
     c2 = abs(A-x) + abs(B-y);
     c3 = abs(A-y) + abs(B-x);
     //cout << c1 << " " << c2 << " " << c3 << endl;

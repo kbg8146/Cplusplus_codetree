@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int n, m;
-
+int n,m;
 int grid[100][100];
 bool visited[100][100];
 
 bool InRange(int x, int y){
-    return 0<=x && x<n && 0<=y && y<m;
+    return  0<=x && x<n && 0<=y && y<m;
 }
 bool CanGo(int x, int y){
     if(!InRange(x,y)) return false;
@@ -19,14 +18,15 @@ void DFS(int x, int y){
     int dx[2]={0,1};
     int dy[2]={1,0};
     for(int i=0;i<2;i++){
-        int nx = x + dx[i];
-        int ny = y+ dy[i];
+        int nx = x+dx[i];
+        int ny = y+dy[i];
         if(CanGo(nx,ny)){
-            visited[nx][ny]=1;
+            visited[nx][ny] = 1;
             DFS(nx,ny);
         }
     }
 }
+
 int main() {
     cin >> n >> m;
     for(int i=0;i<n;i++){
@@ -34,7 +34,7 @@ int main() {
             cin >> grid[i][j];
         }
     }
-    visited[0][0] = true;
+    visited[0][0]=1;
     DFS(0,0);
 
     cout << visited[n-1][m-1];

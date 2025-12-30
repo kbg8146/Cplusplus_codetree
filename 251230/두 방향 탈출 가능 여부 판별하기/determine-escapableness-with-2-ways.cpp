@@ -10,8 +10,8 @@ bool InRange(int x, int y){
 }
 bool CanGo(int x, int y){
     if(!InRange(x,y)) return false;
-    if(!visited[x][y]) return false;
-    if(gird[x][y]==0) return false;
+    if(visited[x][y]) return false;
+    if(grid[x][y]==0) return false;
     return true;
 }
 void DFS(int x, int y){
@@ -23,7 +23,7 @@ void DFS(int x, int y){
         int ny = y + dy[i];
         if(CanGo(nx,ny)){
             visited[nx][ny] = 1;
-            
+            DFS(nx,ny);
         }
     }
 }

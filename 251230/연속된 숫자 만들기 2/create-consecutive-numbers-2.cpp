@@ -11,7 +11,10 @@ int main() {
     if(a>b) swap(a,b);
     if(a>c) swap(a,c);
     if(b>c) swap(b,c);
-
+    if(a+1 == b && b+1 == c){
+        cout << 0;
+        return 0;
+    }
     if(abs(a-b)>=abs(b-c)){
         a = c-1;
         mode = 1;

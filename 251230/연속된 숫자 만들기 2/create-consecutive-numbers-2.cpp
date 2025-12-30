@@ -15,12 +15,12 @@ int main() {
         cout << 0;
         return 0;
     }
-    if(abs(a-b)>=abs(b-c)){
-        a = c-1;
+    if(abs(a-b)>=abs(b-c)&&abs(b-c)>=2){
+        a = b+2;
         mode = 1;
     }
-    else{
-        c = a+1;
+    else if(abs(a-b)<abs(b-c)&&abs(b-a)>=2){
+        c = b-2;
         mode = 0;
     }
     cnt++;
@@ -32,11 +32,11 @@ int main() {
 
         if(a+1 == b && b+1 == c) break;
         if(mode==0){
-            a = c-1;
+            a = b+2;
             mode=1;
         }
         else if(mode == 1){
-            c = a+1;
+            c = b-1;
             mode=0;
         }
         cnt++;

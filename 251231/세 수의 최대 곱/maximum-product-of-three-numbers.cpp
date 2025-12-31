@@ -13,10 +13,8 @@ int main() {
 
     int ans =1;
     int ans1 = 0; int ans2 = 0;
-    for(int i=0;i<3;i++){
-        //cout << arr[i] << " ";
-        ans1 *=arr[i];
-    }
+
+    ans1 =arr[0]*arr[1]*arr[2];
     ans2 = arr[0] * arr[N-1] * arr[N-2];
     ans = max(ans1, ans2);
     //cout << endl;

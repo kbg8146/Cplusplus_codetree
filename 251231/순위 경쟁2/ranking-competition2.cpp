@@ -21,13 +21,13 @@ int main() {
         }
         curr_mode = mode;
         if(Ascore>Bscore){
-            mode = 0;
-        }
-        else if(Ascore<Bscore){
             mode = 1;
         }
-        else if(Ascore == Bscore){
+        else if(Ascore<Bscore){
             mode = 2;
+        }
+        else if(Ascore == Bscore){
+            mode = 0;
         }
         if(curr_mode != mode) cnt++;
     }

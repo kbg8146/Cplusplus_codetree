@@ -1,34 +1,32 @@
 #include <iostream>
 #include <queue>
 
-#define MAX_N 100
-#define MAX_M 100
-
 using namespace std;
 
 int n, m;
 int a[100][100];
 
-queue<pair<int, int>> q;
-bool visited[MAX_N][MAX_N];
+queue<pair<int,int>> q;
+bool visited[100][100];
 
 bool InRange(int x, int y){
-    return 0 <=x && x<n && 0<=y && y<n;
+    return 0<=x && x<n && 0<=y && y<m;
 }
 bool CanGo(int x, int y){
-    return InRange(x,y) && a[x][y] && !visited[x][y];
+    return InRange(x,y) && !visited[x][y] && a[x][y];
 }
 void BFS(){
     while(!q.empty()){
         pair<int, int> curr_pos = q.front();
-        int x = curr_pos.first, y=curr_pos.second;
+        int x = curr_pos.first; int y = curr_pos.second;
         q.pop();
 
-        int dx[4] = {1,0,-1,0};
-        int dy[4] = {0,1,0,-1};
+        int dx[4]={1,0,-1,0};
+        int dy[4]={0,1,0,-1};
 
         for(int i=0;i<4;i++){
-            int nx = x +dx[i]; int ny = y+dy[i];
+            int nx = x+dx[i];
+            int ny = y+dy[i];
 
             if(CanGo(nx,ny)){
                 q.push(make_pair(nx,ny));

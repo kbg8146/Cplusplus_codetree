@@ -18,20 +18,23 @@ int main(){
     cin >> n >> m;
 
     queue<pair<int,int>> q;
+    int sx = -1, sy = -1;
 
     for(int i=0;i<n;i++){
         for(int j=0;j<m;j++){
             cin >> a[i][j];
-            dist[i][j] = -1;           // 기본은 -1
+            dist[i][j] = -1;          // ⭐ 핵심
             if(a[i][j] == 2){
-                q.push({i,j});
-                visited[i][j] = true;
-                dist[i][j] = 0;        // 시작점
+                sx = i; sy = j;
             }
         }
     }
 
-    // BFS
+    // BFS 시작
+    q.push({sx, sy});
+    visited[sx][sy] = true;
+    dist[sx][sy] = 0;
+
     while(!q.empty()){
         auto [x,y] = q.front(); q.pop();
 

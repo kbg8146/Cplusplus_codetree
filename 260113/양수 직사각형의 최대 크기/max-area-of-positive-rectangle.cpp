@@ -21,12 +21,14 @@ int main() {
 
             for(int x_offset = 0;x_offset<n-i;x_offset++){
                 for(int y_offset = 0;y_offset<m-j;y_offset++){
+                    
                     minus = true;
                     count = 0;
+                    
                     int k,l;
                     for(k=i;k<=i+x_offset;k++){
                         for(l=j;l<=j+y_offset;l++){
-                            if(grid[k][l]<0) {
+                            if(grid[k][l]<=0) {
                                 count=0;
                                 minus = false;
                                 break;

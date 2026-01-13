@@ -24,7 +24,8 @@ int main() {
         }
     }
     //cout << "right: " << right << " , left: " << left << endl;
-    int ans = (right-left+1)/3;
+    //cout << m << endl;
+    int ans = (right-left+1)/(m*2+1);
     cout << ans;
 
     return 0;

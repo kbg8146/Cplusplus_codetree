@@ -10,23 +10,15 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
     }
-    int left=0, right=0;
+
+    int cnt = 0;
     for(int i=0;i<n;i++){
         if(arr[i]==1){
-            left = i+1;
-            break;
+            cnt++;
+            i += 2*m;
         }
     }
-    for(int i=n-1;i>0;i--){
-        if(arr[i]==1){
-            right = i+1;
-            break;
-        }
-    }
-    //cout << "right: " << right << " , left: " << left << endl;
-    //cout << m << endl;
-    int ans = (right-left+1)/(m*2+1);
-    cout << ans;
-
+    cout << cnt;
+    
     return 0;
 }

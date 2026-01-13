@@ -2,7 +2,8 @@
 
 using namespace std;
 
-int n, m, ans;
+int n, m;
+int ans = -1;
 int grid[20][20];
 
 bool PositiveRect(int x1, int y1, int x2, int y2){

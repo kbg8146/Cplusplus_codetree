@@ -16,8 +16,8 @@ int main() {
     sort(arr,arr+2*n);
 
     for(int i=0;i<n;i++){
-        cout << arr[2*i+1] << " , " << arr[i] << endl;
-        ans = min(ans, arr[2*i+1]-arr[i]);
+        //cout << arr[i+n] << " , " << arr[i] << endl;
+        ans = min(ans, arr[i+n]-arr[i]);
     }
     cout << ans;
     // Please write your code here.

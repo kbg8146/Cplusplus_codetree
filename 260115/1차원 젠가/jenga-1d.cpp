@@ -8,7 +8,7 @@ int blocks[100];
 int s1, e1;
 int s2, e2;
 int temp[100];
-int j=0;
+int j;
 
 int main() {
     cin >> n;        
@@ -18,7 +18,7 @@ int main() {
     for(int tc=0;tc<2;tc++){
 
         cin >> s1 >> e1;
-
+        j=1;
         for(int i=1;i<=n;i++){
             if(s1<=i && i<=e1) continue;
             temp[j++] = blocks[i];

@@ -16,7 +16,7 @@ bool InRange(int x, int y){
 int calculate(int i, int j,int head){
     int cnt=1;
     while(1){
-        cnt++;
+
         if(grid[i][j]==1){
             if(head==1) head=0;
             else if(head==2) head=3;
@@ -36,6 +36,7 @@ int calculate(int i, int j,int head){
         if(InRange(nx,ny)){
             i = nx;
             j = ny;
+            cnt++;
         }
         else break;
     }
@@ -70,6 +71,6 @@ int main() {
         ans = max(calculate(i,j,head),ans);
     }
 
-    cout << ans;
+    cout << ans+1;
     return 0;
 }

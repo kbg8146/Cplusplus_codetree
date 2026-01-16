@@ -30,7 +30,7 @@ int main() {
             int nx = r+dx[i];
             int ny = c+dy[i];
             
-            if(&InRange(nx,ny)&&a[nx][ny]>a[r][c]){
+            if(InRange(nx,ny)&&a[nx][ny]>a[r][c]){
                 cout << a[nx][ny] << " ";
                 r = nx;
                 c = ny;

@@ -6,6 +6,10 @@ int n;
 int r, c;
 int a[100][100];
 
+bool InRange(int x, int y){
+    return 0<=x && x<n && 0<=y && y<n;
+}
+
 int main() {
     cin >> n >> r >> c;
 
@@ -25,9 +29,8 @@ int main() {
             
             int nx = r+dx[i];
             int ny = c+dy[i];
-            //cout << "<" << nx << ">,<" << ny << "> ";
             
-            if(a[nx][ny]>a[r][c]){
+            if(a[nx][ny]>a[r][c]&&InRange(nx,ny)){
                 cout << a[nx][ny] << " ";
                 r = nx;
                 c = ny;

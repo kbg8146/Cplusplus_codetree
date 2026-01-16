@@ -54,7 +54,7 @@ int main() {
 
     int head; 
     int j;
-    for(int i=0;i<5;i++){
+    for(int i=0;i<n;i++){
         head=0;
         j=0;
         ans = max(calculate(i,j,head),ans);
@@ -64,7 +64,7 @@ int main() {
         ans = max(calculate(i,j,head),ans);
     }
     int i;
-    for(int j=0;j<5;j++){
+    for(int j=0;j<n;j++){
         head=1;
         i=0;
         ans = max(calculate(i,j,head),ans);

@@ -16,18 +16,14 @@ bool InRange(int x, int y){
 int calculate(int i, int j,int head){
     int cnt=1;
     while(1){
-        if(grid[i][j]==0){
-            cnt++;
-        }
-        else if(grid[i][j]==1){
-            cnt+=1;
+        cnt++;
+        if(grid[i][j]==1){
             if(head==1) head=0;
             else if(head==2) head=3;
             else if(head==0) head=1;
             else head=2;
         }
         else if(grid[i][j]==2){
-            cnt+=1;
             if(head==1) head=2;
             else if(head==2) head=1;
             else if(head==0) head=3;

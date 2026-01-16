@@ -38,7 +38,10 @@ int calculate(int i, int j,int head){
             j = ny;
             cnt++;
         }
-        else break;
+        else{
+            cnt++;
+            break;
+        }
     }
     return cnt;
 }
@@ -52,25 +55,15 @@ int main() {
     int head; 
     int j;
     for(int i=0;i<n;i++){
-        head=0;
-        j=0;
-        ans = max(calculate(i,j,head),ans);
-
-        head=2;
-        j=n-1;
-        ans = max(calculate(i,j,head),ans);
+        ans = max(calculate(i,0,1),ans);
+        ans = max(calculate(i,n-1,3),ans);
     }
     int i;
     for(int j=0;j<n;j++){
-        head=1;
-        i=0;
-        ans = max(calculate(i,j,head),ans);
-
-        head=3;
-        i=n-1;
-        ans = max(calculate(i,j,head),ans);
+        ans = max(calculate(0,j,2),ans);
+        ans = max(calculate(n-1,j,0),ans);
     }
 
-    cout << ans+1;
+    cout << ans;
     return 0;
 }

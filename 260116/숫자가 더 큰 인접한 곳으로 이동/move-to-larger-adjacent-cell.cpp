@@ -23,14 +23,14 @@ int main() {
     while(1){
         move = false;
         int dx[4]={-1,1,0,0};
-        int dy[4]={0,0,1,-1};
+        int dy[4]={0,0,-1,1};
 
         for(int i=0;i<4;i++){
             
             int nx = r+dx[i];
             int ny = c+dy[i];
             
-            if(a[nx][ny]>a[r][c]&&InRange(nx,ny)){
+            if(&InRange(nx,ny)&&a[nx][ny]>a[r][c]){
                 cout << a[nx][ny] << " ";
                 r = nx;
                 c = ny;

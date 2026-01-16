@@ -37,7 +37,6 @@ int main() {
                 move = true;
                 break;
             }
-            else move = false;
         }
         if(move == false){
             break;

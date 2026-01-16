@@ -7,7 +7,7 @@ int r, c;
 int a[100][100];
 
 bool InRange(int x, int y){
-    return 0<=x && x<n && 0<=y && y<n;
+    return 1<=x && x<=n && 1<=y && y<=n;
 }
 
 int main() {

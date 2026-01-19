@@ -13,12 +13,11 @@ void FindPermutations(int cnt){
         }
         cout << endl;
         return;
-    
-        for(int i=1;i<=k;i++){
-            selected_nums.push_back(i);
-            FindPermutations(cnt+1);
-            selected_nums.pop_back();
-        }
+    }
+    for(int i=1;i<=k;i++){
+        selected_nums.push_back(i);
+        FindPermutations(cnt+1);
+        selected_nums.pop_back();
     }
 }
 int main() {
